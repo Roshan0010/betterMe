@@ -1,7 +1,5 @@
-import React from 'react';
-import { RecoilRoot, useRecoilValue } from 'recoil';
 import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 // Import your page components
 import Login from './pages/Login';
