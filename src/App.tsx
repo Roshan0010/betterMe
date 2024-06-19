@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 // Import your page components
 import Login from './pages/Login';
 import Redirect from './pages/Redirect';
+import TransformRedirect from './pages/TransformRedirect';
 
 function App() {
   // const testing: string = useRecoilValue(test);
@@ -11,11 +12,12 @@ function App() {
 
   return (
         <Routes>
+           
           <Route path='/' element={<Redirect/>}></Route>
           <Route path="/login" element={<Login />} />
-          {/* Add more routes as needed */}
+         <Route path='/dashboard/:transform' element={<TransformRedirect/>}/>
         </Routes>
-  );
+  )
 }
 
 export default App;
