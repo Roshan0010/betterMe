@@ -27,7 +27,7 @@ const DaysCard = (props: Props) => {
     // 434849
     // 5A5A5A
 
-    const subtitile=props.theme==theme.green?"uploadeed jorney sucessfully":props.theme==theme.red?"Missed to upload your jorney":props.theme==theme.yellow?"jkl":
+    const subtitile=props.theme==theme.green?"uploadeed jorney sucessfully":props.theme==theme.red?"Missed to upload your jorney":
   "cvb"
   return (
     <div className={`sm:w-[80%] xxs:w-full xxs:
