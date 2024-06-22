@@ -13,5 +13,7 @@ Theme BetterMe 1.0
 1.03.
 
 
-#pages 
-1 login
+after a little code :
+on the basic of theme make a page to upload photos and vedio and restric as well in same ui
+
+check what you want to send as data for navigation routes if date need to change the whole pattere from / to - or . see and do it 

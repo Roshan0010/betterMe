@@ -59,7 +59,7 @@ const SkinDashboard = () => {
       }
 
       console.log("*********");
-      const dateFromString = moment(user.skinStart, 'DD/MM/YYYY');
+      const dateFromString = moment(user.skinStart, 'DD-MM-YYYY');
       console.log(dateFromString);
 
       if (!dateFromString.isValid()) {
@@ -74,7 +74,7 @@ const SkinDashboard = () => {
       console.log(skinTrans);
 
       while (currentDate.isBefore(today, 'day')) {
-        const tempdate = currentDate.format('DD/MM/YYYY');
+        const tempdate = currentDate.format('DD-MM-YYYY');
         let id = null;
         let done=false;
 
@@ -111,8 +111,14 @@ const reversedateArray: DaysDataAtom[]=dateArray.reverse();
     }
   }, [skinTrans, user.skinStart]); // Add dependencies here
 
+
+  
   return (
     <div className="min-h-[100vh] bg-[#020913] flex flex-col gap-3 items-center p-4">
+      {
+
+       <DaysCard index={0} size={daysData.length+1}  id={null} date={moment().format('DD-MM-YYYY')}
+        theme={theme.grey}  />}
       {daysData.map((item, index) => {
         let currTheme=theme.red;
         if(item.done){
@@ -124,10 +130,10 @@ const reversedateArray: DaysDataAtom[]=dateArray.reverse();
         theme={currTheme}
          />
       )})}
+     
     </div>
   );
 };
-// Type={item.id?Type.}
 
 export default SkinDashboard;
 
